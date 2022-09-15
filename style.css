@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
+
+body {
+    background-color: #FFE6EE;
+    color: #3A3B3C;
+    font-family: 'Mansalva', cursive;
+    max-width: 800px;
+    text-align: center;
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+.section {
+    border: 1px solid grey;
+    margin: auto 0;
+    max-height: 400px;
+}
