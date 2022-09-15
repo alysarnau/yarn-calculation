@@ -29,7 +29,7 @@ function updateDisplay(result) {
     }
 }
 
-function onSubmit(e) {
+function onCalculatorSubmit(e) {
     e.preventDefault();
     // weightType = document.getElementById("weight-type").value;
     originalWeight = document.getElementById("original-weight").value;
@@ -40,4 +40,11 @@ function onSubmit(e) {
     console.log(`original weight: ${originalWeight}`)
 }
 
-document.getElementById("calculate-form").addEventListener("submit", onSubmit)
+function onYarnChickenSubmit(e) {
+    e.preventDefault();
+    console.log('clicked yarn chicken submit')
+}
+
+
+document.getElementById("calculate-form").addEventListener("submit", onCalculatorSubmit)
+document.getElementById("yarn-chicken-form").addEventListener("submit", onYarnChickenSubmit)
