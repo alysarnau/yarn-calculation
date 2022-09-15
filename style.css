@@ -7,6 +7,7 @@ body {
     font-family: 'Mansalva', cursive;
     max-width: 800px;
     text-align: center;
+    margin: 0 auto;
 }
 
 #container {
@@ -16,8 +17,17 @@ body {
 }
 
 .section {
+    flex: 1;
+    padding: 1em;
     border: 1px solid grey;
-    margin: auto 0;
-    max-height: 400px;
-    min-width: 300px;
+
+}
+
+form {
+    border: 1px solid grey;
+}
+
+.display {
+    height: 50px;
+    font-size: larger;
 }

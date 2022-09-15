@@ -22,23 +22,43 @@
             <h2>Happy Knitting!</h2>
         </div>
         <div class="section">
-            <form>
+            <h2>Enough talk...</h2>
+            <h3>Gimme the calculator!</h3>
+            <form id="calculate-form">
+                <h3>Calculate length per unit:</h3>
                 <div>
                     <label>Original Length</label>
-                    <input type="text" />
+                    <input type="number" id="original-length" />
                     <br />
-                    <input type="radio">In meters?
-                    <input type="radio">In yards?
+                    <input type="radio" id="meter" name="length-type" value="meter" checked>
+                    <label for="meter">In meters?</label>
+                    <input type="radio" id="yard" name="length-type" value="yard">
+                    <label for="yard">In yards?</label>
                 </div>   
                 <div>
-                    <label>Weight</label>
-                    <input type="text" />
-                    <input type="checkbox">
+                    <label>Original Weight</label>
+                    <input type="number" id="original-weight" />
+                    <br />
+                    <input type="radio" id="gram" name="weight-type" value="gram" checked>
+                    <label for="gram">In grams?</label>
+                    <input type="radio" id="ounce" name="weight-type" value="ounce">
+                    <label for="ounce">In ounces?</label>
                 </div>
                 <div>
-                    <button type="submit">Calculate!</button>
+                    <button type="submit" id="calculateButton">Calculate!</button>
                 </div>
             </form>
+            <div class="display" id="yarnPerLength">
+                THIS MUCH YARN plus DISPLAYSPAN
+            </div>
+            <form>
+                <h3>How much do I have left?</h3>
+                I have <label>this much remaining yarn: <input type="text" id="remaining-yarn"/></label>
+                <button type="submit">Play yarn chicken!</button>
+            </form>
+            <div class="display" id="remainingYarn">
+                THIS MUCH YARN plus DISPLAYSPAN
+            </div>
         </div>
     </div>
 
