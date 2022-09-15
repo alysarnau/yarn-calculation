@@ -20,11 +20,13 @@ body {
     flex: 1;
     padding: 1em;
     border: 1px solid grey;
-
+    border-radius: 15px;
+    margin: 1em;
 }
 
 form {
     border: 1px solid grey;
+    border-radius: 15px;
 }
 
 .display {

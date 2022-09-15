@@ -22,10 +22,11 @@
             <h2>Happy Knitting!</h2>
         </div>
         <div class="section">
-            <h2>Enough talk...</h2>
-            <h3>Gimme the calculator!</h3>
+            <h3><em>Enough talk...</em></h3>
+            <h2>Gimme the calculator!</h2>
+            <hr />
+            <h3>Calculate length per unit:</h3>
             <form id="calculate-form">
-                <h3>Calculate length per unit:</h3>
                 <div>
                     <label>Original Length</label>
                     <input type="number" id="original-length" />
@@ -51,9 +52,13 @@
             <div class="display" id="yarnPerLength">
                 THIS MUCH YARN plus DISPLAYSPAN
             </div>
+            <hr />
+            <h3>How much yarn do I have left?</h3>
             <form id="yarn-chicken-form">
-                <h3>How much do I have left?</h3>
-                I have <label>this much remaining yarn: <input type="text" id="remaining-yarn"/></label>
+                I have <label>this much remaining yarn 
+                    <br />
+                    <em>(weight as specified above)</em>: 
+                    <input type="number" id="remaining-yarn"/></label>
                 <button type="submit">Play yarn chicken!</button>
             </form>
             <div class="display" id="remainingYarn">
