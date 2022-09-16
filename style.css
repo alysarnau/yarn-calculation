@@ -22,14 +22,35 @@ body {
     border: 1px solid grey;
     border-radius: 15px;
     margin: 1em;
+    background-color:#FAF9F6;
+    justify-content: center;
 }
 
 form {
     border: 1px solid grey;
     border-radius: 15px;
+    margin: .5em;
+    padding: .5em;
 }
 
 .display {
     height: 50px;
     font-size: larger;
+}
+
+#remaining-yarn {
+    margin: .5em;
+}
+
+button {
+    border-radius: 15px;
+}
+
+.displayDiv {
+    width: 100px;
+    height: 1em;
+    border: 1px solid grey;
+    border-radius: 15px;
+    text-align: center;
+    margin: 0 auto;
 }

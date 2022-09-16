@@ -27,16 +27,18 @@
             <hr />
             <h3>Calculate length per unit:</h3>
             <form id="calculate-form">
-                <div>
-                    <label>Original Length</label>
-                    <input type="number" id="original-length" />
+                <div class="original">
+                    <label>Original Length
+                        <input type="number" id="original-length" />
+                    </label>
                     <br />
                     <input type="radio" id="meter" name="length-type" value="meter" checked>
                     <label for="meter">In meters?</label>
                     <input type="radio" id="yard" name="length-type" value="yard">
                     <label for="yard">In yards?</label>
                 </div>   
-                <div>
+                <br />
+                <div class="original">
                     <label>Original Weight</label>
                     <input type="number" id="original-weight" />
                     <br />
@@ -49,8 +51,8 @@
                     <button type="submit" id="calculateButton">Calculate!</button>
                 </div>
             </form>
-            <div class="display" id="yarnPerLength">
-                THIS MUCH YARN plus DISPLAYSPAN
+            <div class="displayDiv" id="yarnPerLength">
+                
             </div>
             <hr />
             <h3>How much yarn do I have left?</h3>
@@ -61,8 +63,8 @@
                     <input type="number" id="remaining-yarn"/></label>
                 <button type="submit">Play yarn chicken!</button>
             </form>
-            <div class="display" id="remainingYarn">
-                THIS MUCH YARN plus DISPLAYSPAN
+            <div class="displayDiv" id="remainingYarn">
+                
             </div>
         </div>
     </div>
