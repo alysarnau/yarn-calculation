@@ -1,11 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Mansalva&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
+/* TO DO: MAKE THIS RESPONSIVE ON MOBILE */
+/* TO DO: DARK MODE */
+
 body {
     background-color: #FFE6EE;
     color: #3A3B3C;
     font-family: 'Mansalva', cursive;
-    max-width: 800px;
+    max-width: 1200px;
     text-align: center;
     margin: 0 auto;
 }
@@ -47,10 +50,17 @@ button {
 }
 
 .displayDiv {
-    width: 100px;
-    height: 1em;
     border: 1px solid grey;
     border-radius: 15px;
     text-align: center;
     margin: 0 auto;
+}
+
+#topDisplayDiv {
+    display: inline;
+}
+
+#radio-buttons {
+    display: flex;
+    flex-direction: column;
 }

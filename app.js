@@ -1,48 +1,64 @@
 console.log('connected!')
 
 let originalLength;
-let lengthType;
+let measurement;
 let originalWeight;
-let weightType;
 let displaySpan;
+let calculatorResult = 0;
+let lengthType;
 
+// define top display
+let topDisplayDiv = document.getElementById("yarnPerLength")
+// define bottom display
+let bottomDisplayDiv = document.getElementById("remainingYarn")
 
 
 function calculateLengthPerWeight() {
     // divide original length by weight
-
-    let result = originalLength/originalWeight
+    calculatorResult = originalLength/originalWeight
+    console.log('original length:', originalLength)
+    console.log('original weight:', originalWeight)
     // return result
-    return result;
+    return calculatorResult;
 }
 
 function updateDisplay(result) {
     // convert result that to a useful string
-    if (originalLength === 'meter' && originalWeight === 'ounce') {
-        displaySpan = `meters/oz`
-    } else if (originalLength === 'yard' && originalWeight === 'ounce' ) {
+    if (measurement === 'imperial') {
         displaySpan = `yards/oz`
-    } else if (originalLength === 'meter' && originalWeight === 'gram' ) {
-        displaySpan = `meters/gram`
-    } else {
+        lengthType = 'yards'
+    } else if (measurement === 'mixed') {
         displaySpan = `yards/gram`
+        lengthType = 'yards'
+    } else {
+        displaySpan = `meters/gram`
+        lengthType = 'meters'
     }
 }
 
 function onCalculatorSubmit(e) {
     e.preventDefault();
+    updateDisplay()
+    calculateLengthPerWeight()
     // weightType = document.getElementById("weight-type").value;
     originalWeight = document.getElementById("original-weight").value;
     // lengthType = document.getElementById("length-type").value;
     originalLength = document.getElementById("original-length").value;
-    console.log('click')
-    console.log(`original length: ${originalLength}`)
-    console.log(`original weight: ${originalWeight}`)
+    if (originalLength <= 0 || originalWeight <= 0) {
+        alert('Please enter in length and weight before submitting.')
+        return
+    }
+    calculatorResult = originalLength/originalWeight
+    topDisplayDiv.innerHTML = `${calculatorResult} ${displaySpan}`
 }
 
 function onYarnChickenSubmit(e) {
     e.preventDefault();
     console.log('clicked yarn chicken submit')
+    remainingLength = document.getElementById("remaining-yarn").value;
+    console.log(remainingLength)
+    let yarnChickenAmount = calculatorResult * remainingLength
+    bottomDisplayDiv.innerHTML = `${yarnChickenAmount} total ${lengthType}`
 }
 
 

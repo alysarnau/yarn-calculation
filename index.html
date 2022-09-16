@@ -31,30 +31,32 @@
                     <label>Original Length
                         <input type="number" id="original-length" />
                     </label>
-                    <br />
-                    <input type="radio" id="meter" name="length-type" value="meter" checked>
-                    <label for="meter">In meters?</label>
-                    <input type="radio" id="yard" name="length-type" value="yard">
-                    <label for="yard">In yards?</label>
                 </div>   
-                <br />
                 <div class="original">
                     <label>Original Weight</label>
                     <input type="number" id="original-weight" />
                     <br />
-                    <input type="radio" id="gram" name="weight-type" value="gram" checked>
-                    <label for="gram">In grams?</label>
-                    <input type="radio" id="ounce" name="weight-type" value="ounce">
-                    <label for="ounce">In ounces?</label>
+                    <div id="radio-buttons">
+                        <label for="mixed">
+                            <input type="radio" id="mixed" name="measurement" value="mixed" checked>
+                            Yards/Grams?
+                        </label>
+                        <label for="imperial">
+                            <input type="radio" id="imperial" name="measurement" value="imperial">
+                            Yards/Ounces?
+                        </label>
+                        <label for="metric">
+                            <input type="radio" id="metric" name="measurement" value="metric">
+                            Meters/Grams?
+                        </label>
+                    </div>
                 </div>
                 <div>
                     <button type="submit" id="calculateButton">Calculate!</button>
                 </div>
             </form>
-            <div class="displayDiv" id="yarnPerLength">
-                
-            </div>
-            <hr />
+            <br />
+            <div class="displayDiv" id="yarnPerLength"></div>
             <h3>How much yarn do I have left?</h3>
             <form id="yarn-chicken-form">
                 I have <label>this much remaining yarn 
@@ -64,7 +66,7 @@
                 <button type="submit">Play yarn chicken!</button>
             </form>
             <div class="displayDiv" id="remainingYarn">
-                
+                How much yarn do you have left?
             </div>
         </div>
     </div>
