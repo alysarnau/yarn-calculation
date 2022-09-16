@@ -8,3 +8,7 @@ Have you ever had a bundle of yarn, half used, and had no idea how many yards we
 Vanilla JS, HTMl, CSS
 
 ## Made for the 100 days of js challenge 
+
+# Remaining To Do
+* Make response on mobile
+* Dark mode
