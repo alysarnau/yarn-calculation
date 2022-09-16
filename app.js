@@ -58,7 +58,12 @@ function onYarnChickenSubmit(e) {
     remainingLength = document.getElementById("remaining-yarn").value;
     console.log(remainingLength)
     let yarnChickenAmount = calculatorResult * remainingLength
-    bottomDisplayDiv.innerHTML = `${yarnChickenAmount} total ${lengthType}`
+    if (yarnChickenAmount < 10) {
+        bottomDisplayDiv.innerHTML = `${yarnChickenAmount} total ${lengthType} remaining... good luck with yarn chicken! 😱`
+    } else {
+        bottomDisplayDiv.innerHTML = `${yarnChickenAmount} total ${lengthType} remaining!`
+    }
+    
 }
 
 
